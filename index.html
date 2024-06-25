@@ -1,36 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="hero--section section--margin--auto">
+        <div class="app-name-div">
+          <h1>TODO</h1>
+          <img src="images/icon-moon.svg" alt="" />
+        </div>
+        <div class="search--bar">
+          <div class="checkbox">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="2"
+                d="M1 4.304L3.696 7l6-6"
+              />
+            </svg>
+          </div>
+          <input
+            type="text"
+            class="search--input"
+            placeholder="Create a new todo..."
+          />
+        </div>
+      </section>
+    </header>
+    <main class="section--margin--auto">
+      <div class="movements--container">
+        <!-- <div class="movements--tab checked">
+          <div class="checkbox checked">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="2"
+                d="M1 4.304L3.696 7l6-6"
+              />
+            </svg>
+          </div>
+          <div class="task--info">
+            Jog around the park 3x
+            <div class="strike--line"></div>
+          </div>
+          <img src="/images/icon-cross.svg" alt="" class="cross--btn" />
+        </div> -->
 
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!--    <div class="movements--tab">
+          <div class="checkbox"></div>
+          <p class="task--info">Jog around the park 3x</p>
+        </div>
+        <div class="movements--tab">
+          <div class="checkbox"></div>
+          <p class="task--info">Jog around the park 3x</p>
+        </div>
+        <div class="movements--tab">
+          <div class="checkbox"></div>
+          <p class="task--info checked">Jog around the park 3x</p>
+        </div>
+        <div class="movements--tab">
+          <div class="checkbox"></div>
+          <p class="task--info checked">Jog around the park 3x</p>
+        </div>
+        <div class="movements--tab">
+          <div class="checkbox"></div>
+          <p class="task--info checked">Jog around the park 3x</p>
+        </div> -->
+      </div>
+      <section class="tasks--manager">
+        <p class="items--left"><span>5 </span>items left</p>
+        <div class="sort--tasks">
+          <div class="sort--task sort--tasks--all">All</div>
+          <div class="sort--task sort--tasks--active">Active</div>
+          <div class="sort--task sort--tasks--completed">Completed</div>
+        </div>
+        <div class="close--completed">Close Completed</div>
+      </section>
+    </main>
+  </body>
 </html>
