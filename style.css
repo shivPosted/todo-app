@@ -110,14 +110,16 @@ main {
   background-color: #fff;
   box-shadow: 0 1px 10px 0 #77777773;
   border-radius: 5px;
-  height: 50%;
-  overflow: hidden;
+  height: 60%;
+  /* overflow-y: auto; */
 }
 .movements--container {
   width: 100%;
   overflow-y: auto;
   height: 100%;
   transition: all 0.3s ease-in;
+  overflow-y: auto !important;
+  padding-bottom: 4.2rem;
 }
 
 .movements--tab {
@@ -131,6 +133,7 @@ main {
   cursor: pointer;
   /* letter-spacing: -1px; */
   transition: all 0.3s ease-in;
+  overflow-x: auto;
 }
 
 .movements--tab.checked {
@@ -170,7 +173,7 @@ main {
   /* background-color: transparent; */
   display: flex;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background-color: #fff;
   align-items: center;
