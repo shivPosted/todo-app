@@ -168,12 +168,15 @@ const handleCheckboxColor = function () {
     [...chekcboxes].forEach(elem =>
       elem
         .querySelector('path')
-        .setAttribute('stroke', isDarkModeOn ? 'hsl(235, 19%, 35%)' : '#fff')
+        .setAttribute('stroke', isDarkModeOn ? 'hsl(235, 24%, 19%)' : '#fff')
     );
 };
 
 colorModeToggle.addEventListener('click', function (e) {
   isDarkModeOn = !isDarkModeOn;
+  isDarkModeOn
+    ? (this.src = 'images/icon-sun.svg')
+    : (this.src = '/images/icon-moon.svg');
   document.body.classList.toggle('dark');
   todosContainer.classList.toggle('dark');
   sortTaskContainer.closest('.tasks--manager').classList.toggle('dark');
@@ -188,4 +191,5 @@ colorModeToggle.addEventListener('click', function (e) {
     : inputBar.querySelector('.checkbox path').setAttribute('stroke', '#fff');
   inputBar.querySelector('.search--input').classList.toggle('dark');
   document.querySelector('header').classList.toggle('dark');
+  document.querySelector('main').classList.toggle('dark');
 });
