@@ -250,9 +250,6 @@ main.dark {
   opacity: 0;
 }
 
-#cross--btn.dark {
-}
-
 .no--tasks--found {
   text-align: center;
   padding-top: 3.2rem;
