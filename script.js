@@ -67,7 +67,7 @@ inputBar.addEventListener('click', function (e) {
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
               <path
                 fill="none"
-                stroke= ${isDarkModeOn ? 'hsl(235, 19%, 35%)' : '#fff'}
+                stroke= ${isDarkModeOn ? 'hsl(235, 24%, 19%)' : '#fff'}
                 stroke-width="2"
                 d="M1 4.304L3.696 7l6-6"
               />
@@ -77,7 +77,11 @@ inputBar.addEventListener('click', function (e) {
             ${taskEntered}
             <div class="strike--line"></div>
           </div>
-          <img src="/images/icon-cross.svg" alt="" id="cross--btn" class= "hidden" />
+          <img src=${
+            isDarkModeOn
+              ? '/images/icon-cross-light.svg'
+              : '/images/icon-cross.svg'
+          } alt="" id="cross--btn" class= "cross--btn hidden" />
         </div>`;
 
   setTimeout(() => {
@@ -165,11 +169,16 @@ closeCompleteTask.addEventListener('click', function () {
 
 const handleCheckboxColor = function () {
   if (chekcboxes.length > 1)
-    [...chekcboxes].forEach(elem =>
-      elem
-        .querySelector('path')
-        .setAttribute('stroke', isDarkModeOn ? 'hsl(235, 24%, 19%)' : '#fff')
-    );
+    [...document.getElementsByClassName('cross--btn')].forEach(elem => {
+      isDarkModeOn
+        ? (elem.src = 'images/icon-cross-light.svg')
+        : (elem.src = 'images/icon-cross.svg');
+    });
+  [...chekcboxes].forEach(elem =>
+    elem
+      .querySelector('path')
+      .setAttribute('stroke', isDarkModeOn ? 'hsl(235, 24%, 19%)' : '#fff')
+  );
 };
 
 colorModeToggle.addEventListener('click', function (e) {

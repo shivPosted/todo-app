@@ -151,7 +151,7 @@ main.dark {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  border-top: 2px solid #ccc;
+  border-top: 1px solid #ccc;
   padding: 1.6rem 1.2rem;
   font-weight: 500;
   font-size: 1.2rem;
@@ -168,6 +168,7 @@ main.dark {
 .movements--tab.checked {
   /* text-decoration: line-through; */
   color: #999;
+  font-size: 1.1rem;
 }
 
 .movements--tab:first-child {
@@ -175,7 +176,7 @@ main.dark {
 }
 
 .movements--tab:last-child {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .task--info {
@@ -190,7 +191,7 @@ main.dark {
   transform: translateY(-50%);
   opacity: 0;
   background-color: #999;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s linear;
 }
 .strike--line.visible {
   transform: translate(0, -50%);
@@ -247,6 +248,9 @@ main.dark {
 
 #cross--btn.hidden {
   opacity: 0;
+}
+
+#cross--btn.dark {
 }
 
 .no--tasks--found {
